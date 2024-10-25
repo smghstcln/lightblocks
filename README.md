@@ -4,19 +4,19 @@ This project aims to analyze the behavior of the updatePriceFeeds method across 
 
 # Folder Structure:
 oracle_analysis/
-├── data/
-│   ├── polygon_data.csv
-│   ├── scroll_data.csv
-│   ├── linea_data.csv
-│   └── zklink_data.csv
-├── data_collection_polygon.py
-├── data_collection_scroll.py
-├── data_collection_linea.py
-├── data_collection_zklink.py
-├── data_processing.ipynb
-├── utils.py                   # Contains additional helper functions and the main function for collecting data for the four contract/chain 
-├── requirements.txt
-└── README.md
+data_collection_polygon.py
+data_collection_scroll.py
+data_collection_linea.py
+data_collection_zklink.py
+data_processing.ipynb
+utils.py                   # Contains additional helper functions and the main function for collecting data for the four contract/chain 
+requirements.txt
+README.md
+data/
+polygon_data.csv
+scroll_data.csv
+linea_data.csv
+zklink_data.csv
 
 
 # Prerequisites:
@@ -27,7 +27,7 @@ Main libraries used include: web3, matplotlib, pandas.
 
 # Setup Instructions:
 ## Clone the Repository
-`git clone https://github.com/yourusername/yourrepository.git`
+`git clone https://github.com/smghstcln/lightblocks.git`
 `cd yourrepository`
 
 ## Create a Virtual Environment (Recommended)
@@ -39,17 +39,17 @@ Main libraries used include: web3, matplotlib, pandas.
 
 ## Install Dependencies
 -Install the required Python packages using requirements.txt:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 # Data Collection Process (Pulling the raw data):
 The data collection is performed through four Python scripts, each corresponding to a different blockchain network. 
 The `utils.py` file contains helper functions and the main function for collecting data across the four contract/chain pairs. This file abstracts away redundant operations and centralizes the core logic for data collection.
 
-├── data_collection_polygon.py
-├── data_collection_scroll.py
-├── data_collection_linea.py
-├── data_collection_zklink.py
+data_collection_polygon.py
+data_collection_scroll.py
+data_collection_linea.py
+data_collection_zklink.py
 These scripts connect to their respective blockchain networks via RPC endpoints and collect data on transactions involving the updatePriceFeeds method.
 
 To run the data collection scripts:
@@ -64,10 +64,10 @@ Note: Each script can be run independently.
 ## Data Storage
 The collected data will be saved in the data folder. The current files included are the raw data files for each chain use to create the dashboards.
 Each script outputs a CSV file named after the chain:
-│   ├── polygon_data.csv
-│   ├── scroll_data.csv
-│   ├── linea_data.csv
-│   ├── zklink_data.csv
+polygon_data.csv
+scroll_data.csv
+linea_data.csv
+zklink_data.csv
 Ensure that the data folder exists in the root directory. The scripts will create it if it does not exist.
 
 
@@ -106,6 +106,5 @@ Visualization of Single and Multi-Asset Transaction Costs
 Gas Usage Analysis with respect to Merkle Tree Depth
 Interpretation of Results and Recommendations for Operators
 
-To Run the Analysis
--Launch Jupyter Notebook with `jupyter notebook data_processing.ipynb`, or run it sequencially from the file.
+To run the Analysis, launch Jupyter Notebook with `jupyter notebook data_processing.ipynb`, or run it sequencially from the file.
 
