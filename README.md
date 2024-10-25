@@ -44,7 +44,7 @@ Main libraries used include: web3, matplotlib, pandas.<br/>
 
 # Data Collection Process (Pulling the raw data):
 The data collection is performed through four Python scripts, each corresponding to a different blockchain network. <br/>
-The `utils.py` file contains helper functions and the main function for collecting data across the four contract/chain pairs. This file abstracts away redundant operations and centralizes the core logic for data collection.<br/><br/>
+The `utils.py` file contains helper functions and the main function for collecting data across the four contract/chain pairs. This file abstracts away redundant operations and centralizes the core logic for data collection.<br/>
 
 data_collection_polygon.py<br/>
 data_collection_scroll.py<br/>
@@ -56,7 +56,7 @@ To run the data collection scripts:<br/>
 `python data_collection_polygon.py`<br/>
 `python data_collection_scroll.py`<br/>
 `python data_collection_linea.py`<br/>
-`python data_collection_zklink.py`<br/><br/>
+`python data_collection_zklink.py`<br/>
 
 Note: Each script can be run independently.<br/>
 
@@ -68,7 +68,7 @@ polygon_data.csv<br/>
 scroll_data.csv<br/>
 linea_data.csv<br/>
 zklink_data.csv<br/>
-Ensure that the data folder exists in the root directory. The scripts will create it if it does not exist.
+Ensure that the data folder exists in the root directory. The scripts will create it if it does not exist.<br/>
 
 
 ## Verifying and Changing the Time Range
@@ -89,7 +89,7 @@ Ensure the date format is 'YYYY-MM-DD HH:MM:SS'.<br/>
 Each script specifies the data storage path. By default, it saves the output CSV files in the data folder with names specific to each chain.<br/>
 
 data_folder = 'data'<br/>
-csv_file_path = os.path.join(data_folder, '<chain>_data.csv')<br/><br/>
+csv_file_path = os.path.join(data_folder, '<chain>_data.csv')<br/>
 
 To change the storage location or filename:<br/>
 
@@ -99,7 +99,7 @@ Modify data_folder and csv_file_path variables accordingly.
 Running the data collection scripts as they are will reproduce the same results.<br/>
 
 # Data Processing and Analysis
-To analyze the collected data, the `data_processing.ipynb` notebook is provided. It walks through data loading, cleaning, and transformation steps, and produces visualizations and metrics necessary for understanding operator behavior. The notebook is divided into sections for:<br/><br/>
+To analyze the collected data, the `data_processing.ipynb` notebook is provided. It walks through data loading, cleaning, and transformation steps, and produces visualizations and metrics necessary for understanding operator behavior. The notebook is divided into sections for:<br/>
 
 Data Loading and Preprocessing<br/>
 Visualization of Single and Multi-Asset Transaction Costs<br/>
